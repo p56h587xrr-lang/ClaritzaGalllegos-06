@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Personal- Claritza </title>
+    <link rel="stylesheet" type="text/css" href="style.css?v=1">
+</head>
+<body>
+
+    <section id="inicio" class="fade-in cuadro">
+        <div class="presentacion">
+            <h1>Mi nombre es Claritza Yamileth Gallegos Heraldez</h1>
+            <p>Bienvenidos a mi página personal. Aquí les mostraré un poco sobre mí, mis actividades, mi familia, mis amigos, mi escuela y mi grupo de amigos</p>
+            <img src="imagenes/yo.jpg" alt="Claritza" class="foto-principal">
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+     <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <section id="actividades" class="fade-in cuadro">
+        <h2>Mis Actividades Extraescolares</h2>
+        <p>La verdad no soy una persona que sale mucho en su vida diaria,pero estas imagenes
+            es de cuando salgo fuera que viajo esas son las unicas actividades que hago realmente.</p>
+        <div class="actividades">
+            <div class="miembro"><img src="imagenes/act1.jpg" alt="Actividad"></div>
+            <div class="miembro"><img src="imagenes/act2.jpg" alt="Actividad"></div>
+            <div class="miembro"><img src="imagenes/act3.jpg" alt="Actividad"></div>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+     <br><br><br><br><br><br><br><br><br><br><br><br>
+
+     <section id="familia" class="fade-in cuadro">
+        <h2>Mi Familia</h2>
+        <div class="familia">
+            <div class="miembro"><img src="imagenes/papa.jpg" alt="Papá"><p>Mi papá Iker</p></div>
+            <div class="miembro"><img src="imagenes/mama.jpg" alt="Mamá"><p>Mi mamá carmen </p></div>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <section id="amigos" class="fade-in cuadro">
+        <h2>Mis Amigos</h2>
+        <div class="amigos">
+            <div class="miembro"><img src="imagenes/pamela.jpg" alt="Porki"><p>Pamela</p></div>
+            <div class="miembro"><img src="imagenes/karo.jpg" alt="Jose"><p>Karolina</p></div>
+            <div class="miembro"><img src="imagenes/diego.jpg" alt="Más amigos"><p>Diego</p></div>
+            <div class="miembro"><img src="imagenes/gera.jpg" alt="Más amigos"><p>Gerardo</p></div>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+   
+    <section id="plantel" class="fade-in cuadro">
+        <h2>Donde Estudio</h2>
+        <p>Estudio en el CBTis 224, un plantel completo que fomenta la educación y actividades culturales.</p>
+        <img src="imagenes/cbtis.jpeg" alt="CBTis 224">
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+   
+    <section id="grupo" class="fade-in cuadro">
+        <h2>Mi Grupo</h2>
+        <p>Este es mi grupo de amigos, somos un grupo unido... cuando se les da la gana 😄.</p>
+        <img src="imagenes/grupo.jpg" alt="Grupo 5H">
+    </section>
+          <br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br><br><br><br>
+    <script>
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Desplazamiento suave al hacer clic en el menú
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

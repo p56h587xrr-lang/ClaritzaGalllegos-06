@@ -1,0 +1,149 @@
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 80%;
+    margin: 0;
+    padding: 0; 
+    background-color: #f2a1f2;
+    color: #fff;
+
+    /* 🔹 Fondo en diagonales delgadas hacia la izquierda (\) */
+    background-image: repeating-linear-gradient(
+        45deg,          /* dirección de las líneas (\) */
+        #f2a1f2 0px,
+        #f2a1f2 10px,
+        #fff 11px,
+        #fff 12px
+    );
+}
+
+/* 🔹 MENÚ SUPERIOR */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(1, 1, 1);
+    border-bottom: 3px solid #fff;
+    box-shadow: 0 0 15px #fff;
+    z-index: 1000;
+}
+
+.cuadro {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: rgba(30, 30, 30, 0.85);
+    margin: 40px auto;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 85%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+    border: 2px solid #f7f7f4; 
+    box-shadow: 0 0 25px rgba(244, 243, 242, 0.3);
+}
+
+.cuadro.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.foto-principal {
+    margin-top: 20px;
+    width: 280px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px #fff(255,255,255,0.2);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: rgba;
+    text-shadow: 2px 2px 6px #000;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.amigos, .familia, .pareja {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.miembro {
+    text-align: center;
+    width: 120px;
+    background-color: #fff(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.miembro:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+}
+
+.miembro img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px; 
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.miembro p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1em;
+    color: #fff;
+}
+
+.actividades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+    .cuadro {
+        width: 90%;
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .miembro {
+        width: 45%;
+    }
+
+    .foto-principal,
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+
